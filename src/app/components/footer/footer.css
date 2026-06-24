@@ -1,0 +1,41 @@
+footer{
+    /* height: 50px; */
+    background-color:  rgb(43, 91, 75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: wheat;
+}
+#foot{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+.foot{
+    max-width: 30%;
+    
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: rgba(245, 222, 179, 0.58);
+}
+a:hover{
+    color:  rgb(38, 200, 146);
+}
+button{
+    background-color: rgb(252, 252, 252);
+    color: rgb(27, 43, 37);
+    padding: 0 10px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    border:1px solid white;
+    height: 30px;
+    margin: 5px;
+}
+input{
+    height: 30px;
+}
