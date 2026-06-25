@@ -2,7 +2,7 @@ header{
     background-color: rgba(43, 91, 75, 0.941);
     height: 70px;
     box-sizing: border-box;
-    padding: 0 100px;
+    padding: 0 50px;
     display: flex;
     align-items: center;
     position: sticky;
@@ -21,7 +21,7 @@ header{
     height: 100%;
 }
 .logo{
-    
+    flex: 1;
     font-size: 2rem;
     text-align: center; 
     width: 150px;
@@ -46,4 +46,47 @@ a{
 }
 a:hover{
     color:  rgb(38, 200, 146);
+}
+/* Responsive */
+.navbar{
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+.burger{
+    display: none;
+    width: 30px;
+    color: wheat;
+    background-color: #2d4a3e00;
+    border: none;
+    font-size: 2rem;
+}
+a.active{
+    color: rgb(38, 200, 146);
+}
+
+/* Responsive--- */
+
+@media(max-width:900px){
+    .navbar{
+        display: none;
+        position:absolute;
+        top:70px;
+        left:0;
+        right:0;
+        background:#2d4a3ed8;
+        backdrop-filter:blur(5px);
+        flex-direction:column;
+        padding:20px;
+    }
+
+    .burger{
+        display: block;
+    }
+    .navbar.mobileOpen{
+        display: flex;
+    }
 }

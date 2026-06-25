@@ -1,13 +1,17 @@
 <header>
     <section id="header">
         <div class="logo"><h1>Shop</h1></div>
-        <nav>
-            <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="3">blog</a></li>
-                <li><a href="#">product</a></li>
-                <li><a href="#">contact</a></li>
-            </ul>
+
+        <button class="burger" (click)="toggleMenu()">☰</button>
+
+        <nav class="navbar" [class.mobileOpen]="isMenuOpen">
+            @for( link of links; track link){
+                <a href="" 
+                [class.active]="activeLink === link"
+                (click)="setActive(link)">
+                    {{link}}
+                </a>
+            }
         </nav>
     </section>
 </header>
