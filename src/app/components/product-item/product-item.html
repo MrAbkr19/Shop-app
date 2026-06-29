@@ -1,15 +1,31 @@
 
 <div class="box_product">
     <div class="im_prod">
-        <img [src]="product.image" alt="product">
+        <img [src]="product.imageUrl" [alt]="product.name">
     </div>
 
     <div class="info_prod">
-        <h1 class="name_prod">{{product.name}}</h1>
+        <h1 class="name_prod">{{product.name |uppercase}}</h1>
+        <p class="description"> {{product.description}}</p>
+        <p class="categories">Catégories 
+            <span class="ligne">
+                @for (categ of product.categories; track categ){
+                <div class="categ"> {{categ}}</div>
+            }
+            </span> 
+            
+            
+        </p>
 
         <div class="price border-success border-1">
-            <p > {{product.price}} Fcfa</p>
+            <div class="price">
+                <span class="sold"> {{product.soldPrice | currency:'XAF':'symbol'}}</span>
+                <s class="regular">{{product.regularPrice | currency:'XAF'}}</s>
+            </div>
         </div>
+        <p class="date">
+            {{product.createdAt | date:'dd/MM/yyyy'}}
+        </p>
     </div>
     
 </div>
